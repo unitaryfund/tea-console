@@ -49,7 +49,7 @@ class TeaConsoleConfig(Singleton):
             section="general",
             option="timezone",
             to_value=pytz.timezone,
-            to_string=lambda v: v.zone,
+            to_string=lambda v: str(v),
         ),
         "log_dir": ConfigField(section="general", option="log_dir"),
     }
